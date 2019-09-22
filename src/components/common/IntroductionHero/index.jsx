@@ -5,11 +5,13 @@ import Button from 'components/common/Button';
 
 const IntroductionHero = () => {
   return (
-    <header>
-      <img src={headerImage} alt="Header" />
-      <h1>Work</h1>
-      <Button />
-    </header>
+    <section>
+      <header>
+        <img src={headerImage} alt="Header" />
+        <h1>Work</h1>
+        <Button />
+      </header>
+    </section>
   );
 };
 

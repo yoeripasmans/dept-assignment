@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import GlobalStyle from 'styles';
 
-import Home from 'components/modules/Home';
+import Work from 'components/modules/Work';
 import MainHeader from 'components/common/MainHeader';
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <MainHeader />
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/work" component={Work} />
         </Switch>
       </BrowserRouter>
     </>
