@@ -1,15 +1,20 @@
 import React from 'react';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import GlobalStyle from 'styles';
 
-import MainHeader from 'components/modules/MainHeader';
-import IntroductionHero from 'components/modules/IntroductionHero';
+import Home from 'components/modules/Home';
+import MainHeader from 'components/common/MainHeader';
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
       <MainHeader />
-      <IntroductionHero />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </BrowserRouter>
     </>
   );
 };
