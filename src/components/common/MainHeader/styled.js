@@ -9,6 +9,7 @@ export const HeaderContainer = styled.div`
   height: 50px;
   width: 100%;
   background-color: #fff;
+  z-index: 5;
 `;
 
 export const Header = styled.header`

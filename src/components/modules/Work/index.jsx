@@ -7,7 +7,7 @@ const Work = () => {
   return (
     <>
       <IntroductionHero />
-      {/* <CaseOverview /> */}
+      <CaseOverview />
     </>
   );
 };

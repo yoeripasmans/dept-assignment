@@ -16,11 +16,12 @@ export const Image = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
+  z-index: 1;
 `;
 
 export const Title = styled.h1`
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
@@ -28,4 +29,5 @@ export const Title = styled.h1`
   font-family: Teko;
   font-size: 170px;
   font-weight: normal;
+  z-index: 1;
 `;

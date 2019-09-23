@@ -4,6 +4,14 @@ import { RichText } from 'prismic-reactjs';
 
 import Loader from 'components/common/Loader';
 
+import {
+  CaseList,
+  CaseItem,
+  CaseImage,
+  CaseTitle,
+  CaseClient,
+} from './styled';
+
 const apiEndpoint = process.env.REACT_APP_API_ENDPOINT;
 const accessToken = process.env.REACT_APP_API_ACCESTOKEN;
 
@@ -27,14 +35,14 @@ const CaseOverview = () => {
   return (
     <main>
       { docs ? (
-        <ul>
+        <CaseList>
           {docs.map((caseItem) =>
-          <li key={caseItem.id}>
-            <img alt="cover" src={caseItem.data.image.url} />
-            <span>{RichText.asText(caseItem.data.client_name)}</span>
-            <h3>{RichText.asText(caseItem.data.title)}</h3>
-          </li>)}
-        </ul>
+          <CaseItem key={caseItem.id}>
+            <CaseImage alt="cover" src={caseItem.data.image.url} />
+            <CaseClient>{RichText.asText(caseItem.data.client_name)}</CaseClient>
+            <CaseTitle>{RichText.asText(caseItem.data.title)}</CaseTitle>
+          </CaseItem>)}
+        </CaseList>
       )
         : <Loader />
       }
