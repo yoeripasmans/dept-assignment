@@ -25,7 +25,7 @@ const CaseOverview = () => {
 }, []);
 
   return (
-    <>
+    <main>
       { docs ? (
         <ul>
           {docs.map((caseItem) =>
@@ -38,7 +38,7 @@ const CaseOverview = () => {
       )
         : <Loader />
       }
-    </>
+    </main>
   );
 };
 

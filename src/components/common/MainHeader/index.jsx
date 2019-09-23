@@ -1,14 +1,17 @@
 import React from 'react';
-import { ReactComponent as Logo } from 'static/vectors/logo.svg';
+
+import { Header, HeaderContainer, StyledLogo } from './styled';
 
 import Menu from './Menu';
 
 const MainHeader = () => {
   return (
-    <header>
-      <Logo />
-      <Menu />
-    </header>
+    <HeaderContainer>
+      <Header>
+        <StyledLogo />
+        <Menu />
+      </Header>
+    </HeaderContainer>
   );
 };
 

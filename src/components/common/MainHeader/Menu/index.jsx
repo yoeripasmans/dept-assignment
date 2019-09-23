@@ -5,7 +5,10 @@ const Menu = () => {
   return (
     <MenuButton>
       <MenuText>Menu</MenuText>
-      <MenuIcon />
+      <MenuIcon>
+        <span></span>
+        <span></span>
+      </MenuIcon>
     </MenuButton>
   );
 };
