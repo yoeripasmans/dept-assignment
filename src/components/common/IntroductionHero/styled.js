@@ -29,5 +29,5 @@ export const Title = styled.h1`
   font-family: Teko;
   font-size: 170px;
   font-weight: normal;
-  z-index: 1;
+  z-index: 2;
 `;
