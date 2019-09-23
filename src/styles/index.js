@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:400,600,700');
-
   html {
     box-sizing: border-box;
   }
@@ -14,20 +12,20 @@ export default createGlobalStyle`
   }
 
   body {
-      font-family: 'Open Sans', sans-serif;
-      padding: 0;
-      margin: 0;
-      -webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
   }
 
   main {
-      max-width: 77rem;
-      margin: 0 auto;
-      padding: 0 1rem;
+    max-width: 77rem;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 
   h1 {
-      font-size: 2.5rem;
+    font-family 'Teko';
   }
 
   h3 {
