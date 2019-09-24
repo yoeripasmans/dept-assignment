@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { media } from 'styles/utils';
 
 export const CaseList = styled.ul`
   margin: 0;
   padding: 0;
+
+  ${media.tablet`
+  display: flex;
+  justify-content: space-between;
+  `}
 `;
 
 export const CaseItem = styled.li`
@@ -12,11 +18,16 @@ export const CaseItem = styled.li`
   display: flex;
   flex-direction: column;
   margin: 30px 0 50px;
+
+  ${media.tablet`
+  width: calc(50% - 15px);
+  `}
 `;
 
 export const CaseImage = styled.img`
   object-fit: cover;
   height: 286px;
+  width: 100%;
 `;
 
 export const CaseTitle = styled.h3`

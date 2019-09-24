@@ -1,9 +1,14 @@
 import styled from 'styled-components';
+import { media } from 'styles/utils';
 
 export const Header = styled.header`
   position: relative;
   width: 100%;
   height: 320px;
+
+  ${media.desktop`
+    height: 100vh;
+  `}
 `;
 
 export const Container = styled.section`
@@ -30,4 +35,11 @@ export const Title = styled.h1`
   font-size: 170px;
   font-weight: normal;
   z-index: 2;
+  text-transform: uppercase;
+
+  ${media.desktop`
+    font-size: 400px;
+    top: 45%;
+    left: 35%;
+  `}
 `;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { media } from 'styles/utils';
 
 const StyledLink = styled(Link)`
   display: flex;
@@ -19,6 +20,15 @@ const StyledLink = styled(Link)`
   background-color: #000;
   width: calc(100% - 40px);
   text-transform: uppercase;
+
+  ${media.desktop`
+    position: absolute;
+    bottom: 50px;
+    right: 120px;
+    z-index: 5;
+    width: 170px;
+    height: 50px;
+  `}
 `;
 
 const Button = () => {
