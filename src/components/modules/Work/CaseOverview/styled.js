@@ -29,6 +29,10 @@ export const CaseImage = styled.img`
   object-fit: cover;
   height: 286px;
   width: 100%;
+
+  ${media.tablet`
+  height: 637px;
+  `}
 `;
 
 export const CaseTitle = styled.h3`

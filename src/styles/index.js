@@ -14,7 +14,7 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -22,7 +22,7 @@ export default createGlobalStyle`
   }
 
   main {
-    max-width: 77rem;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
