@@ -9,6 +9,7 @@ export const CaseList = styled.ul`
   ${media.tablet`
   display: flex;
   justify-content: space-between;
+  margin-top: 60px;
   `}
 `;
 
