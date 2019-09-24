@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const CaseList = styled.ul`
   margin: 0;
@@ -29,4 +30,15 @@ export const CaseTitle = styled.h3`
 export const CaseClient = styled.span`
   font-size: 14px;
   margin: 20px 0 10px 0;
+  display: block;
+  color: #939393;
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #000;
+
+  &:focus, &:hover, &:visited, &:link, &:active {
+     text-decoration: none;
+  }
 `;

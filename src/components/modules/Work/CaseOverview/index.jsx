@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Prismic from 'prismic-javascript';
-import { RichText } from 'prismic-reactjs';
+import React from 'react';
+import PT from 'prop-types';
 
-import Loader from 'components/common/Loader';
+import { RichText } from 'prismic-reactjs';
 
 import {
   CaseList,
@@ -10,44 +9,30 @@ import {
   CaseImage,
   CaseTitle,
   CaseClient,
+  StyledLink,
 } from './styled';
 
-const apiEndpoint = process.env.REACT_APP_API_ENDPOINT;
-const accessToken = process.env.REACT_APP_API_ACCESTOKEN;
-
-const Client = Prismic.client(apiEndpoint, { accessToken });
-
-const CaseOverview = () => {
-  const [docs, setDocData] = useState(null);
-
-  useEffect(() => {
-  const fetchData = async () => {
-    const response = await Client.query(
-      Prismic.Predicates.at('document.type', 'case')
-    );
-    if (response) {
-      setDocData(response.results);
-    }
-  };
-  fetchData();
-}, []);
-
+const CaseOverview = ({ data }) => {
   return (
     <main>
-      { docs ? (
-        <CaseList>
-          {docs.map((caseItem) =>
-          <CaseItem key={caseItem.id}>
-            <CaseImage alt="cover" src={caseItem.data.image.url} />
-            <CaseClient>{RichText.asText(caseItem.data.client_name)}</CaseClient>
-            <CaseTitle>{RichText.asText(caseItem.data.title)}</CaseTitle>
-          </CaseItem>)}
-        </CaseList>
-      )
-        : <Loader />
-      }
+      <section>
+          <CaseList>
+            {data.map((caseItem) =>
+            <CaseItem key={caseItem.id}>
+              <StyledLink to={`work/${caseItem.id}`}>
+                <CaseImage alt="cover" src={caseItem.data.image.url} />
+                <CaseClient>{RichText.asText(caseItem.data.client_name)}</CaseClient>
+                <CaseTitle>{RichText.asText(caseItem.data.title)}</CaseTitle>
+              </StyledLink>
+            </CaseItem>)}
+          </CaseList>
+      </section>
     </main>
   );
+};
+
+CaseOverview.propTypes = {
+  data: PT.array,
 };
 
 export default CaseOverview;
