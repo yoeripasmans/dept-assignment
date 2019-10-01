@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import fontFaces from './fontFaces';
 
 export default createGlobalStyle`
+  ${fontFaces}
+
   html {
     box-sizing: border-box;
     min-height: 100%;
@@ -28,7 +31,7 @@ export default createGlobalStyle`
   }
 
   h1 {
-    font-family 'Teko';
+    font-family: 'Teko';
   }
 
   h3 {
